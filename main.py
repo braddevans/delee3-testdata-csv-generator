@@ -33,6 +33,7 @@ if __name__ == '__main__':
                     item_name = random.choice(items)
                     price = random.choice(prices)
                     total += float(price)
+                    name = random.choice(names)
                     if '(stringreplace)' in item_name:
                         itemz += f"{item_name.replace('(stringreplace)', f'{name}')} - {price}"
                         # print(itemz)
@@ -54,6 +55,6 @@ if __name__ == '__main__':
                 writer.writerow([f'{date} {time}', location, name, f"{itemz}", price, payment_type, card_number])
             else:
                 print(f'"{date} {time}","{location}","{name}","{itemz}","{price}","{payment_type}",')
-                writer.writerow([f'{date} {time}', location, name, f"{itemz}", price, payment_type, ])
+                writer.writerow([f'{date} {time}', location, name, f"{itemz}", price, payment_type, None])
 
             records += 1
