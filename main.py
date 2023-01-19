@@ -51,10 +51,10 @@ if __name__ == '__main__':
                 itemz = itemz[:-1]
 
             if payment_type == "CARD":
-                print(f'"{date} {time}","{location}","{name}","{itemz}","{price}","{payment_type}","{card_number}"')
-                writer.writerow([f'{date} {time}', location, name, f"{itemz}", price, payment_type, card_number])
+                print(f'"{date} {time}","{location}","{name}","{itemz}","{total}","{payment_type}","{card_number}"')
+                writer.writerow([f'{date} {time}', location, name, f"{itemz}", total, payment_type, card_number])
             else:
-                print(f'"{date} {time}","{location}","{name}","{itemz}","{price}","{payment_type}",')
-                writer.writerow([f'{date} {time}', location, name, f"{itemz}", price, payment_type, None])
+                print(f'"{date} {time}","{location}","{name}","{itemz}","{total}","{payment_type}",')
+                writer.writerow([f'{date} {time}', location, name, f"{itemz}", total, payment_type, None])
 
             records += 1
